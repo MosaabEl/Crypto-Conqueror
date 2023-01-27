@@ -1,0 +1,149 @@
+<html>
+    <head>
+        <script src="https://unpkg.com/lightweight-charts/dist/lightweight-charts.standalone.production.js"></script>
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles/botAppDesign.css') }}">
+    </head>
+    <body>
+        <div id='positionImg'>
+            <img src="./static/styles/projectbotLogo.png" id='botLogo' class = ''alt="">
+        </div>
+        <h1 id = 'flameLogo' contenteditable="true">{{ title }}</h1>
+        
+        <div class = 'chart' id ="chart">
+
+            
+        </div>
+        <button id="helpBtn">?</button>
+        <div id="myModal" class="modal">
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>How to use this application:</h2>
+            <p>This is a simple trading bot application, all you need to do is enter the asset trading pair into the search bar and then click generate to focus onto that asset and observe its live candlestick chart alongside volume data for each candle.
+                The bot must be activated by purchasing an asset by entering the asset pair on the right panel and confirming the purchase. However before this is done you must select either RSI methodology or ROC methodology in the Settings section where you can also choose to configure the variables for these methodologies.
+                The default threshold values are traditional RSI values, you can adjust this for both RSI or ROC, however there is no set default values for ROC and it is advised that you select an oversold value below 0 and not to leave the default values for ROC.</p>
+          </div>   
+        </div>
+        <div id='BuySell'>
+            
+            <div>
+                <h2 id="menutitle">Buy Cryptos:</h2>
+                
+                <form action="/activate" method="post" id ='buy'>
+                    
+                    <input type="text" id='buyTXT' name='buyTXT' placeholder="Enter Asset">
+                    <input type="submit" id = "turnOn" class="toggleButtons" name="activate" value="Purchase"> 
+                    <div id='error'>
+                        {% if error %}
+                        <p><strong>ERROR: </strong> {{ error }}
+                        {% endif %}
+                    </div>
+                    <div id ="settings"> 
+                        <h2>Bot Settings:</h2>
+
+                    <input type="radio" name = 'radio' id='radioRSI' value='RSI'>
+                    <label for="RSI">RSI</label>
+                    <input type="radio" name = 'radio' id='radioROC' value='ROC'>
+                    <label for="ROC">ROC</label> <br>
+
+                    <input type="text" class="settingsInput" name="rsiLen" placeholder ="14">
+                    « RSI Period <br>
+                    
+                    <input type="text" class="settingsInput" name="rsiOversold"  placeholder="30">
+                    « RSI Oversold <br>
+                    
+                    <input type="text" class="settingsInput" name="rsiOverbought" placeholder="70">
+                    « RSI Overbought <br>
+                    
+                    <input type="text" class="settingsInput" name="quantity" placeholder='0.4'>
+                    « Quantity to Buy
+                    
+                </div>
+                
+                </form>
+                
+            </div>
+            <div id ="accountBalances"> 
+                <h2>Balances:</h2> 
+                <table id ="balanceData">
+                    {% for balance in my_balances %} 
+                    <tr>
+                        
+                        <td>{{ balance['asset'] }}</td>
+                        <td>{{ balance['free'] }}</td>
+                      
+                    </tr>
+                    {% endfor %}
+                </table>
+                
+
+            </div>
+            
+            
+        </div>
+        <div id ="trades"></div>
+
+        <div id="buyCrypto">
+            
+        <div id="graphSelect">
+            <form action="/graphSelect" method="post" id="myForm">
+                <input type="text" name="symbol" id="symbol">
+                <input type="submit" name= "generate" id='generate' value= "Generate Graph">
+                
+            </form>
+            <div id=lookupDiv>
+                <h2>Crypto Lookup:</h2>
+                <select name="" id="lookupData">
+                    <option>Search...</option>
+                    {% for symbol in symbols %}
+                    <option>{{ symbol['symbol'] }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+          
+        </div>
+
+            <script>
+                    
+                
+
+                                    // Get the modal
+                    var modal = document.getElementById("myModal");
+
+                    // Get the button that opens the modal
+                    var btn = document.getElementById("helpBtn");
+
+                    // Get the <span> element that closes the modal
+                    var span = document.getElementsByClassName("close")[0];
+
+                    // When the user clicks on the button, open the modal
+                    btn.onclick = function() {
+                    modal.style.display = "block";
+                    }
+
+                    // When the user clicks on <span> (x), close the modal
+                    span.onclick = function() {
+                    modal.style.display = "none";
+                    }
+
+                    // When the user clicks anywhere outside of the modal, close it
+                    window.onclick = function(event) {
+                    if (event.target == modal) {
+                        modal.style.display = "none";
+                    }
+                    }
+            </script>
+        </div>
+           
+        
+        
+        <script>
+           // var binanceSocket = new WebSocket("wss://stream.binance.com:9443/ws/btcusdt@trade");
+            
+            var tradeDiv = document.getElementById('trades')
+
+            
+        </script>
+         
+        <script src = "{{ url_for('static', filename='chart1.js') }}"> </script>
+    </body>
+</html>

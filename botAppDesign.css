@@ -1,0 +1,306 @@
+.chart 
+{
+    
+    
+    border: 2px solid #30D5C8;
+    box-shadow: 0 0 0.8em 0 #30D5C8, 0 0 0.8em 0 #30D5C8;
+    margin-right: 300px;
+    margin-left: 35px;
+}
+
+
+body
+{
+    font-style: normal;
+    background-color: #484848;
+    border: 5px solid #30D5C8;
+    box-shadow: 0 0 0.8em 0 #30D5C8, 0 0 0.8em 0 #30D5C8;
+}
+
+#generate{
+    background-color: #484848;
+    font-size: 1.8rem;
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+    color: #30D5C8;
+    border: #30D5C8 0.1em solid;
+    padding: 0.11em 0.2em 0.2em;
+    border-radius: 0.160em;
+    text-shadow: 0 0 0.225em #30D5C8;
+    box-shadow: 0 0 0.5em 0 #30D5C8, 0 0 0.5em 0 #30D5C8;
+    margin-left: 10px;
+    width: 300px;
+}
+#generate:hover{
+    background-color: #30D5C8;
+    color: #30D5C8;
+    text-shadow: none;
+    font-size: 2.04rem;
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+    color: #484848;
+    border: #30D5C8 0.1em solid;
+    padding: 0.11em 0.2em 0.2em;
+    border-radius: 0.25em;
+    text-shadow: 0 0 0.08em rgb(2, 5, 5);
+    box-shadow: 0 0 0.2em 0 #30D5C8, 0 0 0.2em 0 #30D5C8;
+  
+}
+#symbol{
+    background-color: #A8A8A8;
+    font-size: 1.6rem;
+    margin-left: 35px;
+    margin-top: 33px;
+    width:300px;
+}
+
+#BuySell{
+    color: #30D5C8;
+    font-size: large; 
+    position: fixed; left: 1145px; top: 95px;
+       
+}
+#lookupData{
+    font-size: 1.3rem;
+    background-color: #A8A8A8;
+    color:black;
+}
+h4, #botMode{
+    display:inline-block;
+    padding-right: 0px;
+    padding-left:12px;
+}
+.toggleButtons{
+    background-color: #484848;
+    font-size: 1.4rem;
+    width: 150px;
+    cursor: pointer;
+    text-decoration: none;
+    color: #30D5C8;
+    border: #30D5C8 0.06em solid;
+    border-radius: 0.25em;
+    text-shadow: 0 0 0.5em #30D5C8;
+    box-shadow: 0 0 0.5em 0 #30D5C8, 0 0 0.3em 0 #30D5C8;
+    margin-left: 10px;
+}
+#turnOn:hover{
+    background-color: #30D5C8;
+    color: #484848;
+    font-size: 1.3rem;
+    
+    cursor: pointer;
+    text-decoration: none;
+    border: #30D5C8 0.06em solid;
+    border-radius: 0.25em;
+    text-shadow: 0 0 0.025em #A8A8A8;
+    box-shadow: 0 0 0.100em 0 #A8A8A8, 0 0 0.1em 0 #A8A8A8;
+    margin-left: 10px;
+}
+#turnOff:hover{
+    background-color: #30D5C8;
+    color: red;
+    font-size: 1.3rem;
+    
+    cursor: pointer;
+    text-decoration: none;
+    border: #30D5C8 0.06em solid;
+    border-radius: 0.25em;
+    text-shadow: 0 0 0.025em #30D5C8;
+    box-shadow: 0 0 0.100em 0 #30D5C8, 0 0 0.1em 0 #30D5C8;
+    margin-left: 10px;
+}
+#turnOn:focus{
+    background-color: #30D5C8;
+    color: #484848;
+    font-size: 1.3rem;
+    
+    cursor: pointer;
+    text-decoration: none;
+    border: #A8A8A8 0.06em solid;
+    border-radius: 0.25em;
+    text-shadow: 0 0 0.025em #A8A8A8;
+    box-shadow: 0 0 0.100em 0 #A8A8A8, 0 0 0.1em 0 #A8A8A8;
+    margin-left: 10px; 
+}
+#turnOff:focus{
+    background-color: #484848;
+    color: red;
+    font-size: 1.3rem;
+    
+    cursor: pointer;
+    text-decoration: none;
+    border: red 0.06em solid;
+    border-radius: 0.25em;
+    text-shadow: 0 0 0.025em red;
+    box-shadow: 0 0 0.100em 0 red, 0 0 0.1em 0 red;
+    margin-left: 10px; 
+}
+#botMode{color:red;}
+
+#helpBtn{
+    font-size: 2rem;
+    color: #30D5C8;
+    background-color: rgb(156, 156, 156);
+    position: fixed; left: 1370px; top: 20px;
+    border-radius: 0.8em;
+    text-shadow: 0 0 0.5em #30D5C8;
+    box-shadow: 0 0 0.5em 0 #30D5C8, 0 0 0.3em 0 #30D5C8;
+    border: #30D5C8 0.05em solid;
+    
+}
+#helpBtn:hover{
+    
+    background-color: #30D5C8;
+    color: #A8A8A8;
+    border: #A8A8A8 0.05em solid;
+}
+#positionImg{
+    height:30px;
+}
+#botLogo{
+    width: 54px;
+    height: 50px;
+    border-radius: 8em;
+    
+    border: white 0.2em solid;
+    position: relative;
+    top: 6px;
+    left: 666px;
+}
+
+.modal {
+    display: none; 
+    position: fixed; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.6); 
+    z-index: 1; 
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #30D5C8;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  #balanceData{
+      color: #30D5C8;
+  }
+  
+  #buyTXT {
+      
+      font: 1.3rem;
+      width: 70px;
+      height:24;
+      background-color: #A8A8A8;
+      color: black;
+  }
+
+  .settingsInput{
+      width: 30px;
+      background-color: #A8A8A8;
+  }
+
+
+
+.fire {
+  margin: 50px auto;
+  width: 80%;
+  max-width: 1000px;
+  height: 205px;
+
+  background-position: center center;
+  background-size: 1000px 200px;
+  border-radius: 10px;
+
+  overflow: hidden;
+    text-align: center;
+  vertical-align: middle;
+
+}
+.fire:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+
+#flameLogo {
+    color: whitesmoke;
+    text-align: center;
+    padding-top: 20px;
+    font-size: 1.25rem;
+
+ 
+  animation: 3s Blazing infinite alternate linear;
+}
+
+
+  
+  @keyframes Blazing {
+    0%{text-shadow: 0 3px 20px red, 0 0 20px red,
+      0 0 10px orange,
+      0 0 0 orange,
+      0 0 5px yellow,
+      -2px -5px 5px yellow,
+      4px -10px 10px yellow;}
+    26%{text-shadow: 0 3px 20px red, 0 0 30px red,
+      0 0 20px orange,
+      0 0 5px yellow,
+      -2px -5px 5px yellow,
+      3px -10px 10px yellow,
+      -4px -15px 20px yellow;}
+    45%{text-shadow: 0 3px 20px red, 0 0 20px red,
+      0 -5px 10px orange,
+      -2px -5px 5px yellow,
+      3px -10px 10px yellow,
+      -4px -15px 20px yellow,
+      2px -20px 30px rgba(255,255,0,0.5);}
+    70%{text-shadow: 0 3px 20px red, 0 0 20px red,
+      0 -5px 10px orange,
+      3px -5px 5px yellow,
+      -4px -10px 10px yellow,
+      2px -20px 30px rgba(250, 250, 45, 0.5),
+      0px -25px 40px rgba(250, 250, 45, 0.5)}
+    100%{text-shadow: 0 3px 20px red, 0 0 20px red,
+      0 0 10px orange,
+      0 0 0 yellow,
+      0 0 5px yellow,
+      -2px -5px 5px yellow,
+      4px -10px 10px yellow;}
+  }
+
+#error {
+    color:red
+}
+#lookupDiv{
+    position: relative;
+    color:#30D5C8;
+    left: 700px;
+    top: -80px;
+}
+
+  

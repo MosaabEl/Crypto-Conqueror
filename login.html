@@ -1,0 +1,37 @@
+<html>
+  <head>
+    <title>Crypto Conqueror</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/botLoginPage.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+  </head>
+  <body>
+      <div id='test'>
+      <img id='imageBack' src="./static/styles/botbackground.png" alt="">
+    </div>
+    <div id="loginPanel">
+        <div id='positionImg'>
+            <img src="./static/styles/projectbotLogo.png" id='botLogo' class = ''alt="">
+        </div>
+      <h1 id='flameLogo'>Crypto Conqueror</h1>
+      
+      <form action="" method="post">
+          <h3>Username: </h3> 
+         <input class = 'loginInfo' type="text" placeholder="Username" name="username" value="{{
+          request.form.username }}">
+          
+          <h3>Password: </h3>
+         <input class = 'loginInfo' type="password" placeholder="Password" name="password" value="{{
+          request.form.password }}">
+            <br>
+        <input id='submit' type="submit" value="Login">
+      </form>
+      <div id="errorMSG">
+        {% if errorMsg %}
+          <p><strong>ERROR: </strong> {{ errorMsg }}
+        {% endif %}
+      </div>
+    </div>
+    
+  </body>
+</html>

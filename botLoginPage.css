@@ -1,0 +1,155 @@
+body{
+    border: #30D5C8 0.6em solid;
+    box-shadow: 0 0 0.400em 0 #30D5C8, 0 0 0.4em 0 #30D5C8;
+    box-shadow: 0 0 0.700em 0 #30D5C8, 0 0 0.7em 0 #30D5C8;
+    margin: 0;
+    padding: 0;
+}
+#imageBack{
+height: 100%;
+width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+#errorMSG{
+    color:red;
+}
+#loginPanel{
+    top: 90px;
+    width:420px;
+    height:520px;
+    background-color: #484848;
+    color: #30D5C8;
+    border-radius: 20%;
+    border: #30D5C8 0.6em solid;
+    text-shadow: 0 0 0.025em #30D5C8;
+    box-shadow: 0 0 0.400em 0 #30D5C8, 0 0 0.4em 0 #30D5C8;
+    text-align: center;
+    position: absolute;
+    left: 500px;
+}
+.loginInfo{
+   
+    width: 70px;
+    height:24px;
+    top:-15px;
+    padding-top:0px;
+    background-color: #A8A8A8;
+    color: black;
+    position: relative;
+}
+#submit{
+    background-color: #484848;
+    font-size: 1.4rem;
+    size: 2rem;
+    width: 130px;
+    cursor: pointer;
+    text-decoration: none;
+    color: #30D5C8;
+    border: #30D5C8 0.06em solid;
+    border-radius: 0.25em;
+    text-shadow: 0 0 0.5em #30D5C8;
+    box-shadow: 0 0 0.5em 0 #30D5C8, 0 0 0.3em 0 #30D5C8;
+    position: relative;
+    top:10px;
+}
+#submit:hover{
+    background-color: #30D5C8;
+    color: #484848;
+    font-size: 1.3rem;
+    
+    cursor: pointer;
+    text-decoration: none;
+    border: #30D5C8 0.06em solid;
+    border-radius: 0.25em;
+    text-shadow: 0 0 0.025em #A8A8A8;
+    box-shadow: 0 0 0.100em 0 #A8A8A8, 0 0 0.1em 0 #A8A8A8;
+    margin-left: 10px;
+}
+
+#botLogo{
+    width: 166px;
+    height: 150px;
+    border-radius: 100em;
+    
+    border: white 0.4em solid;
+    position: relative;
+    top: 30px;
+    bottom: 50px;
+    
+}
+#positionImg{
+    height:180px;
+    
+}
+
+
+.fire {
+  margin: 50px auto;
+  width: 80%;
+  max-width: 1000px;
+  height: 205px;
+
+  background-position: center center;
+  background-size: 1000px 200px;
+  border-radius: 10px;
+
+  overflow: hidden;
+    text-align: center;
+  vertical-align: middle;
+
+}
+.fire:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+
+#flameLogo {
+    color: whitesmoke;
+    text-align: center;
+    padding-top: 7px;
+    padding-bottom: -20px;
+    font-size: 2rem;
+
+ 
+  animation: 3s Blazing infinite alternate linear;
+}
+
+
+  
+  @keyframes Blazing {
+    0%{text-shadow: 0 3px 20px red, 0 0 20px red,
+      0 0 10px orange,
+      0 0 0 orange,
+      0 0 5px yellow,
+      -2px -5px 5px yellow,
+      4px -10px 10px yellow;}
+    26%{text-shadow: 0 3px 20px red, 0 0 30px red,
+      0 0 20px orange,
+      0 0 5px yellow,
+      -2px -5px 5px yellow,
+      3px -10px 10px yellow,
+      -4px -15px 20px yellow;}
+    45%{text-shadow: 0 3px 20px red, 0 0 20px red,
+      0 -5px 10px orange,
+      -2px -5px 5px yellow,
+      3px -10px 10px yellow,
+      -4px -15px 20px yellow,
+      2px -20px 30px rgba(255,255,0,0.5);}
+    70%{text-shadow: 0 3px 20px red, 0 0 20px red,
+      0 -5px 10px orange,
+      3px -5px 5px yellow,
+      -4px -10px 10px yellow,
+      2px -20px 30px rgba(250, 250, 45, 0.5),
+      0px -25px 40px rgba(250, 250, 45, 0.5)}
+    100%{text-shadow: 0 3px 20px red, 0 0 20px red,
+      0 0 10px orange,
+      0 0 0 yellow,
+      0 0 5px yellow,
+      -2px -5px 5px yellow,
+      4px -10px 10px yellow;}
+  }
